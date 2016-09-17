@@ -1,9 +1,17 @@
 import React from 'react';
+import ReactDOM from 'react-dom';
+
+import SearchBar from './components/search_bar';
+
+const API_KEY = 'AIzaSyCeV9QD5a0mJSF_8O6d1a2dfx6XhUbMvHM';
+
 
 // Create new component. This component should produce some HTML
-const App = function() {
-    return <div>Hi!</div>;
+const App = () => {
+    return <div>
+        <SearchBar />
+    </div>
 };
 
 //Take this component's generated HTML and put it on the page (in the DOM)
-React.render(App);
+ReactDOM.render(<App />, document.querySelector('.container'));
